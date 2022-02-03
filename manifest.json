@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "LimboKing",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Limbo King",
+    "default_icon": "assets/icon-32.png",
+    "default_popup": "main.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "<all_urls>",
+    "activeTab",
+    "scripting"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline'"
+  }
+}
